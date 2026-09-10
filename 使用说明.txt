@@ -1,0 +1,15 @@
+调用： python  xlsx_to_android_strings.py  "翻译文件xlsx路径"   "目标项目res路径"
+
+ （注意：res路径下必须有values values-zh-rCN这样子的文件夹）
+
+
+ 读取xlsx第一行作为表头，识别key列和各语言列
+✅ 根据语言标识（如value-zh-rCN）找到对应的values-xx文件夹
+✅ 将翻译写入对应文件夹下的strings.xml
+✅ 如果翻译为空，不写入
+✅ 如果整行为空，跳过该行
+✅ 自动创建不存在的文件夹和strings.xml文件
+✅ 已有 key 的翻译内容会被替换；新 key 会追加到 strings.xml 的末尾
+
+
+翻译文件格式参考   翻译.xlsx
